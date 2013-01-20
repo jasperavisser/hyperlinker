@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+	<!-- Preference pages -->
+	<extension
+			point="org.eclipse.ui.preferencePages">
+		<page
+				class="eu.portavita.hyperlinker.preferences.PreferencePage"
+				id="eu.portavita.hyperlinker.preferences.PreferencePage"
+				name="Hyperlink detector">
+		</page>
+	</extension>
+
+	<!-- Preferences -->
+	<extension
+			point="org.eclipse.core.runtime.preferences">
+		<initializer
+				class="eu.portavita.hyperlinker.preferences.PreferenceInitializer">
+		</initializer>
+	</extension>
+
+	<!-- Hyperlink detector -->
+	<extension
+			point="org.eclipse.ui.workbench.texteditor.hyperlinkDetectors">
+		<hyperlinkDetector
+				id="eu.portavita.hyperlinker.HyperlinkDetector"
+				targetId="org.eclipse.ui.DefaultTextEditor"
+				class="eu.portavita.hyperlinker.HyperlinkDetector"
+				name="Hyperlink detector">
+		</hyperlinkDetector>
+	</extension>
+
+</plugin>

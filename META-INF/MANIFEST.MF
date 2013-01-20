@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Hyperlinker
+Bundle-SymbolicName: hyperlinker; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: eu.portavita.hyperlinker.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jface.text;bundle-version="3.7.2"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
