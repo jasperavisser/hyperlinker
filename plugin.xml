@@ -8,7 +8,7 @@
 		<page
 				class="eu.portavita.hyperlinker.preferences.PreferencePage"
 				id="eu.portavita.hyperlinker.preferences.PreferencePage"
-				name="Hyperlink detector">
+				name="Customizable Hyperlink">
 		</page>
 	</extension>
 
@@ -27,7 +27,7 @@
 				id="eu.portavita.hyperlinker.HyperlinkDetector"
 				targetId="org.eclipse.ui.DefaultTextEditor"
 				class="eu.portavita.hyperlinker.HyperlinkDetector"
-				name="Hyperlink detector">
+				name="Customizable Hyperlink">
 		</hyperlinkDetector>
 	</extension>
 

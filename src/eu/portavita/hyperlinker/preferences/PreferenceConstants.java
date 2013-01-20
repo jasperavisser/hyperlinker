@@ -7,6 +7,8 @@ package eu.portavita.hyperlinker.preferences;
  */
 public class PreferenceConstants {
 
+	public static final String DESCRIPTION = "description";
+
 	public static final String PATTERN = "pattern";
 
 	public static final String TARGET_URL = "target_url";

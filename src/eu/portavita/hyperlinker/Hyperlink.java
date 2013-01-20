@@ -26,6 +26,11 @@ public class Hyperlink implements IHyperlink {
 	private static final String INTERNAL_BROWSER_ID = "3490328034";
 
 	/**
+	 * Description of the hyperlink.
+	 */
+	private String description;
+
+	/**
 	 * Region of the hyperlink.
 	 */
 	private IRegion region;
@@ -40,10 +45,12 @@ public class Hyperlink implements IHyperlink {
 	 *
 	 * @param region Region of the hyperlink.
 	 * @param text Text of the hyperlink.
+	 * @param description
 	 */
-	public Hyperlink(IRegion region, String text) {
+	public Hyperlink(IRegion region, String text, String description) {
 		this.region = region;
 		this.text = text;
+		this.description = description;
 	}
 
 	@Override
@@ -53,12 +60,12 @@ public class Hyperlink implements IHyperlink {
 
 	@Override
 	public String getHyperlinkText() {
-		return "Open in reflection";
+		return description;
 	}
 
 	@Override
 	public String getTypeLabel() {
-		return "Open in reflection";
+		return description;
 	}
 
 	@Override

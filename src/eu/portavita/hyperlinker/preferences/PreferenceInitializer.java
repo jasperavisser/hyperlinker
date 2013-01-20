@@ -15,6 +15,7 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 	@Override
 	public void initializeDefaultPreferences() {
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
+		store.setDefault(PreferenceConstants.DESCRIPTION, "Open custom hyperlink");
 		store.setDefault(PreferenceConstants.PATTERN, "\\w+");
 		store.setDefault(PreferenceConstants.TARGET_URL, "http://localhost/#q=%s");
 		store.setDefault(PreferenceConstants.USE_EXTERNAL_BROWSER, false);

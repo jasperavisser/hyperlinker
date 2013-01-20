@@ -74,15 +74,16 @@ public class HyperlinkDetector extends AbstractHyperlinkDetector {
 
 		// Match hyperlink.
 		Hyperlink result = null;
-		final Matcher matcher = Pattern.compile(
-				preferenceStore.getString(PreferenceConstants.PATTERN)).matcher(line);
+		String pattern = preferenceStore.getString(PreferenceConstants.PATTERN);
+		String description = preferenceStore.getString(PreferenceConstants.DESCRIPTION);
+		final Matcher matcher = Pattern.compile(pattern).matcher(line);
 		while (matcher.find() && result == null) {
 			final int group = 0;
 			final int start = matcher.start(group);
 			final int end = matcher.end(group);
 			final String text = matcher.group(group);
 			if (start <= offsetInLine && end > offsetInLine) {
-				result = new Hyperlink(new Region(start + lineInfo.getOffset(), end - start), text);
+				result = new Hyperlink(new Region(start + lineInfo.getOffset(), end - start), text, description);
 				break;
 			}
 		}
